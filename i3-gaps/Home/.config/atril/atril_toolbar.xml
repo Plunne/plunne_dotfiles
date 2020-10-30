@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<toolbars version="1.0">
+  <toolbar name="DefaultToolBar" hidden="false" editable="true">
+    <toolitem name="ViewSidebar"/>
+    <toolitem name="FileOpenRecent"/>
+    <toolitem name="GoPreviousPage"/>
+    <toolitem name="GoNextPage"/>
+    <separator/>
+    <toolitem name="FilePrint"/>
+    <toolitem name="ViewContinuous"/>
+    <toolitem name="ViewDual"/>
+    <toolitem name="PageSelector"/>
+    <toolitem name="ViewFullscreen"/>
+    <toolitem name="ViewZoom"/>
+    <toolitem name="ViewZoomReset"/>
+    <toolitem name="ViewZoomOut"/>
+    <toolitem name="ViewZoomIn"/>
+    <separator/>
+    <toolitem name="EditRotateLeft"/>
+    <toolitem name="EditRotateRight"/>
+    <separator/>
+  </toolbar>
+</toolbars>

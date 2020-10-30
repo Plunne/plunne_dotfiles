@@ -1,0 +1,113 @@
+! =============================================================================
+!       Xressources
+! =============================================================================
+
+! ============
+!   Colors
+! ============
+
+*active:     #FF87FF
+*innactive:  #5E6386
+
+*background:   #2A2D3D
+*foreground:   #FF87FF
+
+*cursorColor:  #FF87FF
+*fadeColor: #4C566A
+*fading: 20
+
+*color0: #3B4252
+*color1: #D81765
+*color2: #A6E22E
+*color3: #FFA800
+*color4: #16B1FB
+*color5: #FF87FF
+*color6: #00FFFF
+*color7: #E5E9F0
+
+*color8: #3B4252
+*color9: #D81765
+*color10: #A6E22E
+*color11: #FFA800
+*color12: #16B1FB
+*color13: #FF87FF
+*color14: #00FFFF
+*color15: #E5E9F0
+
+
+
+! =============
+!     Rofi
+! =============
+
+rofi.modi: drun,window,run
+rofi.sidebar-mode: false
+rofi.fullscreen: false
+rofi.color-enabled: true
+rofi.font: System San Francisco Display 14
+rofi.separator-style: solid
+rofi.bw: 1
+rofi.lines: 5
+rofi.line-margin: 2
+rofi.eh: 1
+rofi.show-icons: false
+rofi.hide-scrollbar: true
+rofi.width: 36
+rofi.padding: 60
+rofi.yoffset: 0
+
+!-----------------------------------------------------------------------------------------
+!
+!   bg: background color row
+!   fg: text color
+!   bgalt: background color alternating row
+!   hlbg: background color selected row
+!   hlfg: foreground color selected row  
+!
+!-----------------------------------------------------------------------------------------
+
+!-----------------------------------------------------------------------------------------
+!                   'bg',           'border',   'separator'
+rofi.color-window:  argb:e60b0c15,  #FF87FF,    #FF87FF
+!
+!-----------------------------------------------------------------------------------------
+
+!-----------------------------------------------------------------------------------------
+!                   'bg',           'fg',       'bgalt',        'hlbg',         'hlfg'
+rofi.color-normal:  argb:00000000,  #D8DEE9,    argb:00000000   ,argb:01ffffff, #FF87FF
+rofi.color-active:  argb:00000000,  #D8DEE9,    argb:00000000   ,argb:01ffffff, #D8DEE9
+rofi.color-urgent:  argb:00000000,  #D8DEE9,    argb:00000000   ,argb:01ffffff, #D8DEE9
+!
+!-----------------------------------------------------------------------------------------
+
+
+
+! ==================
+!       URxvt
+! ==================
+
+URxvt*scrollBar:	        false
+URxvt*letterSpace:  	    -1
+URxvt.internalBorder:       10
+URxvt*font: 		        xft:Hack:regular:size=11
+URxvt*boldFont:		        xft:Hack:bold:size=11
+URxvt*cursorBlink:          true
+URxvt.iso14755:		        true
+URxvt*utf8:			        true
+URxvt.keysym.C-equal:       resize-font:bigger
+URxvt.keysym.C-parenright:  resize-font:smaller
+URxvt.depth: 32
+URxvt.background: [90]#0B0C15
+
+
+
+! =================
+!       Xft
+! =================
+
+Xft.dpi:            96
+Xft.antialias:     	true
+Xft.rgba:	        subpixel
+Xft.hinting:       	true
+Xft.hintstyle:	    hintslight
+xcursor.theme:      "Flatery"

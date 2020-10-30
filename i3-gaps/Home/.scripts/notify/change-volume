@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+# Audio volume changer using alsa mixer
+
+function cvol {
+    amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
+}
+
+function chkmute {
+    amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+}
+
+function notify {
+    volume=`cvol`
+    
+    if [ "$volume" = "0" ]; then
+        icon_name="audio-volume-muted"
+    else    
+        if [  "$volume" -lt "10" ]; then
+            icon_name="audio-volume-low"
+        else
+            if [ "$volume" -lt "30" ]; then
+                icon_name="audio-volume-low"
+            else
+                if [ "$volume" -lt "70" ]; then
+                    icon_name="audio-volume-medium"
+                else
+                    icon_name="audio-volume-high"
+                fi
+            fi
+        fi
+    fi
+
+    ~/.scripts/notify/notify-send.sh -i "$icon_name" -t 2000 -r 123 "Audio" "$volume%"
+}
+
+case $1 in
+    up)
+	# Unmute
+	amixer sset Master unmute
+	# +5%
+	amixer set Master 5%+
+	notify
+	;;
+    down)
+    # Unmute
+	amixer sset Master unmute
+    # -5%
+	amixer set Master 5%-
+	notify
+	;;
+    mute)
+    # Toggle mute
+	amixer set Master toggle
+	if chkmute ; then
+    icon_name="audio-volume-muted"
+    ~/.scripts/notify/notify-send.sh -i "$icon_name" -t 2000 -r 123 "Audio" "Muted"
+	else
+	    notify
+	fi
+	;;
+esac    
