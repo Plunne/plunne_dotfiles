@@ -1,7 +1,7 @@
 # plunne_dotfiles<br />
 <br />
 <br />
-<h3>all my config contain Home and Root directory.</h3>
+<h3>all my config contain Home and Root directory.</h3><br />
 <br />
 <b>Home directory :</b><br />
 1 - Open Home/<br />
