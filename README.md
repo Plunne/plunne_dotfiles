@@ -3,7 +3,7 @@
 <br />
 <h3>all my config contain Home and Root directory.</h3>
 <br />
-<b><Home directory :</b><br />
+<b>Home directory :</b><br />
 1 - Open Home/<br />
 2 - Copy all the Home/ content<br />
 3 - Paste directly into your home/<user> directory<br />
