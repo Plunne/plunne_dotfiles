@@ -1,0 +1,96 @@
+############################
+#     Plunne Alacritty     #
+############################
+
+# Colors
+colors:
+  primary:
+    background: "#0B0C15"
+    foreground: "#FF87FF"
+
+  normal:
+    black: "#3B4252"
+    red: "#BE5046"
+    green: "#A3BE8C"
+    yellow: "#E5C07B"
+    blue: "#81A1C1"
+    magenta: "#B48EAD"
+    cyan: "#88C0D0"
+    white: "#abb2bf"
+
+  bright:
+    black: "#5c6370"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#d19a66"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#ECEFF4"
+
+# Background
+background_opacity: 0.9
+
+# Font
+font:
+  normal:
+    family: FiraCode NF
+    style: Regular
+  bold:
+    family: FiraCode NF
+    style: Bold
+  italic:
+    family: FiraCode NF
+    style: Italic
+  bold_italic:
+    family: FiraCode NF
+    style: Bold Italic
+
+  size: 10
+
+  offset:
+    x: 0
+    y: 2
+  
+  glyph_offset:
+    x: 0
+    y: 0
+
+# Window
+window:
+  padding:
+    x: 20
+    y: 15
+
+# Cursor
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+    blink_interval: 750
+  
+# Scrolling
+scrolling:
+  history: 10000
+  multiplier: 10
+
+
+#########
+# Other #
+#########
+
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+
+live_config_reload: true
+
+############
+# Keybinds #
+############
+
+key_bindings:
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }

@@ -1,0 +1,78 @@
+! =============================================================================
+!       Xressources
+! =============================================================================
+
+! ========
+!    WM
+! ========
+
+*font: FiraCode NF
+
+*foreground:    #ABB2BF
+*background:    #D60B0C15
+*active:        #FF87FF
+*innactive:     #3E4452
+*commented:     #5C6370
+
+*.cursorColor:  #FF87FF
+
+
+! =================
+!       Xft
+! =================
+
+Xft.dpi:            96
+Xft.antialias:     	true
+Xft.rgba:	        subpixel
+Xft.hinting:       	true
+Xft.hintstyle:	    hintslight
+xcursor.theme:      "Flatery"
+
+
+! =============
+!     Rofi
+! =============
+
+rofi.modi: drun,window,run
+rofi.sidebar-mode: false
+rofi.fullscreen: false
+rofi.color-enabled: true
+rofi.font: FiraCode NF 14
+rofi.separator-style: solid
+rofi.bw: 0
+rofi.lines: 5
+rofi.line-margin: 2
+rofi.eh: 1
+rofi.show-icons: false
+rofi.hide-scrollbar: true
+rofi.width: 36
+rofi.padding: 60
+rofi.yoffset: 0
+
+!-----------------------------------------------------------------------------------------
+!
+!   bg: background color row
+!   fg: text color
+!   bgalt: background color alternating row
+!   hlbg: background color selected row
+!   hlfg: foreground color selected row  
+!
+!-----------------------------------------------------------------------------------------
+
+!-----------------------------------------------------------------------------------------
+!                   'bg',           'border',   'separator'
+rofi.color-window:  argb:e60b0c15,  #FF87FF,    #FF87FF
+!
+!-----------------------------------------------------------------------------------------
+
+!-----------------------------------------------------------------------------------------
+!                   'bg',           'fg',       'bgalt',        'hlbg',         'hlfg'
+rofi.color-normal:  argb:00000000,  #D8DEE9,    argb:00000000   ,argb:01ffffff, #FF87FF
+rofi.color-active:  argb:00000000,  #D8DEE9,    argb:00000000   ,argb:01ffffff, #D8DEE9
+rofi.color-urgent:  argb:00000000,  #D8DEE9,    argb:00000000   ,argb:01ffffff, #D8DEE9
+!
+!-----------------------------------------------------------------------------------------
+
+
+
+

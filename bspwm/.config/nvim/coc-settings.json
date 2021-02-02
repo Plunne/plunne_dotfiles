@@ -1,0 +1,19 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "bash",
+        "clangd",
+        "css",
+        "html",
+        "xml",
+        "python",
+        "yaml",
+        "json"
+    ],
+    "clangd.fallbackFlags": [
+        "-I/usr/avr/include",
+        "-D__AVR_ATmega2560__"
+    ],
+    "explorer.width": 30,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false
+}

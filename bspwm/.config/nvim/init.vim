@@ -1,0 +1,16 @@
+" Plugins
+source $HOME/.config/nvim/vim-plug/plugins.vim
+" Settings
+source $HOME/.config/nvim/general/settings.vim
+" Keymap
+source $HOME/.config/nvim/keys/mappings.vim
+" Themes
+source $HOME/.config/nvim/themes/onedark.vim
+" CoC
+source $HOME/.config/nvim/plug-config/coc.vim
+" Airline
+source $HOME/.config/nvim/themes/airline.vim
+" Devicons
+source $HOME/.config/nvim/general/devicons.vim
+" Colorizer
+lua require'plug-colorizer'

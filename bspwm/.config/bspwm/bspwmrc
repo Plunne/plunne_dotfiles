@@ -1,0 +1,41 @@
+#! /bin/sh
+
+bspc rule -r "*"
+
+# Sources
+source ~/.scripts/monitors.sh
+source ~/.scripts/polybar.sh
+
+# Launch
+sh .scripts/monitors.sh
+sh .scripts/polybar.sh
+
+
+#############
+#   BSPWM   #
+#############
+
+# Wallpaper
+feh --bg-scale ~/.wallpaper/121419.jpg
+
+# Desktops
+bspc monitor $Monitor_Main -d      
+bspc monitor $Monitor_Right -d   ﭮ
+
+# WM Properties
+bspc config border_width         0
+bspc config window_gap           12
+
+# WM Padding
+bspc config top_padding          44
+
+# Layouts Properties
+bspc config split_ratio          0.60
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Windows Rules
+bspc rule -a firefox desktop='^7'
+bspc rule -a discord desktop='^9'
+bspc rule -a spectacle state='floating'
+bspc rule -a flameshot state='floating'

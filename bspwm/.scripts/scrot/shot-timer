@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Take screenshot after ..s
+# See scrot manual
+
+savedir=~/Pictures
+sec="5"
+
+# Begin
+notify-send -t 1000 -i deepin-screenshot -u low "Screenshot" "In $(echo $sec)s ..."
+
+rm /tmp/*_scrot*.png
+scrot -d $sec -e 'mv $f /tmp/'
+current="$(ls /tmp/ | grep 'scrot')"
+cp /tmp/$current $savedir
+rm /tmp/*_scrot*.png
+
+notify-send -i deepin-screenshot -u low "Screenshot" "Saved in <u>$savedir/</u>"

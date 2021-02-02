@@ -1,0 +1,467 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+
+[colors]
+background = ${xrdb:background}
+background-alt = ${xrdb:active}
+foreground = ${xrdb:commented}
+foreground-alt = ${xrdb:innactive}
+primary = ${xrdb:active}
+secondary = #e60053
+alert = #bd2c40
+
+[fonts]
+font-0 = FiraCode NF:style=Solid:pixelsize=12:antialias=true;3
+font-1 = FiraCode NF:style=Regular:pixelsize=20:antialias=true;4
+font-2 = FiraCode NF:style=Regular:pixelsize=16:antialias=true;3
+
+;;------------------------------------
+;;            Glyphs
+;;------------------------------------
+
+
+[glyphs]
+cleft = 
+cright = 
+
+[module/cleft-pink0]
+type = custom/text
+content-background = #00000000
+content-foreground = ${colors.primary}
+content = ${glyphs.cright}
+content-font = 3
+
+[module/cright-pink0]
+type = custom/text
+content-background = #00000000
+content-foreground = ${colors.primary}
+content = ${glyphs.cleft}
+content-font = 3
+
+[module/cleft-pink]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.primary}
+content = ${glyphs.cright}
+content-font = 3
+
+[module/cright-pink]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.primary}
+content = ${glyphs.cleft}
+content-font = 3
+
+[module/cleft-bg]
+type = custom/text
+content-background = #00000000
+content-foreground = ${colors.background}
+content = ${glyphs.cright}
+content-font = 3
+
+[module/cright-bg]
+type = custom/text
+content-background = #00000000
+content-foreground = ${colors.background}
+content = ${glyphs.cleft}
+content-font = 3
+
+;--------------------------
+;          BARs
+;--------------------------
+
+[bar/plunne-bg]
+monitor=DVI-D-0
+width = 1896px
+height = 32
+offset-x = 12
+offset-y = 10
+radius = 15
+padding-left = 0
+padding-right = 0
+cursor-click = pointer
+cursor-scroll = ns-resize
+module-margin = 0
+background = ${colors.background}
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+;;------- Plunne0 -------;;
+modules-center = date
+
+
+[bar/plunne-title]
+monitor=DVI-D-0
+width = 400px
+height = 24
+offset-x = 280
+offset-y = 14
+radius = 13
+padding-left = 0
+padding-right = 0
+background = #00000000
+foreground = #FFFFFF
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+module-margin = 0
+line-size = 0
+line-color = #f00
+cursor-click = pointer
+cursor-scroll = ns-resize
+;;------- Plunne1 -------;;
+modules-left = xwindow
+
+
+[bar/plunne-desktops]
+monitor=DVI-D-0
+width = 288px
+height = 24
+offset-x = 17
+offset-y = 14
+radius = 13
+padding-left = 0
+padding-right = 0
+background = ${colors.background}
+foreground = ${colors.primary}
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+module-margin = 0
+line-size = 0
+line-color = #f00
+cursor-click = pointer
+cursor-scroll = ns-resize
+;;------- Plunne2 -------;;
+modules-left = bspwm
+
+
+[bar/plunne-status]
+monitor=DVI-D-0
+width = 900px
+height = 24
+offset-x = 1003px
+offset-y = 14
+radius = 13
+padding-left = 0
+padding-right = 0
+background = #00000000
+foreground = ${colors.primary}
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+module-margin = 0
+line-size = 0
+line-color = #f00
+cursor-click = pointer
+cursor-scroll = ns-resize
+;;------- Plunne3 -------;;
+modules-right = wlan eth-logo eth memory alsa battery cleft-pink0 powermenu
+
+
+[bar/secondary-panel]
+monitor=HDMI-A-0
+width = 100%
+height = 26
+offset-x = 0
+offset-y = 0
+radius = 0
+padding-left = 0
+padding-right = 0
+
+; default colors
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+fixed-center = true
+module-margin = 0
+line-size = 0
+line-color = #f00
+cursor-click = pointer
+cursor-scroll = ns-resize
+;;------- Modules -------;;
+modules-left = bspwm xwindow
+modules-center = ;xwindow
+modules-right = wlan eth memory alsa battery date powermenu
+
+
+
+
+
+;;------------------------------------
+;;            LEFT
+;;------------------------------------
+
+[module/launcher1]
+type = custom/text
+content-font = 3
+
+content = "﯑"
+content-background = ${colors.primary}
+content-foreground = #FFFFFF
+click-left = rofi -show drun -display-drun "Run " -display-run ">_ " -display-window "Win "
+
+
+
+[module/sep1]
+type = custom/text
+content = "  "
+
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-mode><label-state>
+pin-workspaces = true
+
+; focused
+label-focused = " %name% "
+label-focused-foreground = #FFFFFF
+label-focused-background = ${colors.primary}
+label-focused-font = 2
+; occupied
+label-occupied = " %name% "
+label-occupied-foreground = ${colors.foreground}
+label-occupied-font = 2
+; urgent
+label-urgent = " %name% "
+label-urgent-foreground = ${colors.primary}
+label-urgent-font = 2
+; empty
+label-empty = " %name% "
+label-empty-foreground = ${colors.foreground}
+label-empty-font = 2
+
+
+;;------------------------------------
+;;            CENTER
+;;------------------------------------
+
+[module/xwindow]
+type = internal/xwindow
+label = "    %title:0:30:...% "
+format = <label>
+format-background = #00000000
+format-foreground = ${colors.foreground}
+;format-overline = ${colors.primary}
+;format-underline = ${colors.primary}
+
+
+
+;;------------------------------------
+;;            RIGHT
+;;------------------------------------
+
+[module/wlan]
+type = internal/network
+interface = wlp1s0
+interval = 3.0
+
+; wlan connected
+label-connected = "  %essid%"
+format-connected = <label-connected>
+format-connected-background = #00000000
+format-connected-foreground = ${colors.foreground}
+; wlan disconnected
+label-disconnected =
+format-disconnected = <label-disconnected>
+format-disconnected-background = #00000000
+format-disconnected-foreground = ${colors.foreground}
+
+
+[module/eth-logo]
+#type = internal/network
+#interface = enp6s0
+#interval = 3.0
+
+; eth connected
+#label-connected = 
+#format-connected = <label-connected>
+#format-connected-background = #00000000
+#format-connected-foreground = ${colors.foreground}
+#format-connected-font = 2
+;eth disconnected
+#label-disconnected = 
+#format-disconnected = <label-disconnected>
+#format-disconnected-background = #00000000
+#format-disconnected-foreground = ${colors.foreground}
+#format-connected-font = 2
+
+
+
+[module/eth]
+type = internal/network
+interface = enp6s0
+interval = 3.0
+
+; eth connected
+label-connected = " %downspeed%   "
+format-connected = <label-connected>
+format-connected-background = #00000000
+format-connected-foreground = ${colors.foreground}
+;eth disconnected
+label-disconnected = " none    "
+format-disconnected = <label-disconnected>
+format-disconnected-background = #00000000
+format-disconnected-foreground = ${colors.foreground}
+
+
+
+[module/memory]
+type = internal/memory
+interval = 2
+
+; RAM
+format-prefix = ""
+format-prefix-font = 2
+label = " %mb_used%   "
+format-background = #00000000
+format-foreground = ${colors.foreground}
+format-padding = 0
+
+
+
+[module/alsa]
+type = internal/alsa
+
+; volume
+label-volume = "%percentage%%   "
+format-volume = <ramp-volume> <label-volume>
+format-volume-background = #00000000
+format-volume-foreground = ${colors.foreground}
+; muted
+format-muted-prefix = "ﱝ"
+format-muted-prefix-font = 2
+label-muted = " muted  "
+format-muted-background = #00000000
+format-muted-foreground = ${colors.foreground}
+; ramp
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
+ramp-volume-font = 2
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 99
+
+; charging
+label-charging = "  %percentage%%   "
+format-charging = <label-charging>
+format-charging-background = #00000000
+format-charging-foreground = ${colors.foreground}
+format-charging-padding = 4
+; discharging
+label-discharging = "  %percentage%%   "
+format-discharging = <label-discharging>
+format-discharging-background = #00000000
+format-discharging-foreground = ${colors.foreground}
+format-discharging-padding = 4
+; full
+label-full = "   100%   "
+format-full = <label-full>
+format-full-background = #00000000
+format-full-foreground = ${colors.foreground}
+format-full-padding = 3
+
+
+
+
+[module/date]
+type = internal/date
+interval = 1
+radius = 10px
+; date
+date = ""
+date-alt = " %a. %d %b. %Y  | "
+; time
+time = "%H:%M %p"
+time-alt = "%H:%M:%S %p"
+; date time
+label = "%date% %time%"
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+
+
+[module/powermenu]
+type = custom/menu
+label-active-font = 1
+format-spacing = 0
+padding-left = 0
+padding-right = 0
+format-background = ${colors.primary}
+format-foreground = #FFFFFF
+
+; power button
+label-open = "   "
+label-open-font = 3
+; cancel button
+label-close = "  cancel  "
+; separators
+label-separator = "   "
+label-separator-foreground = ${colors.background}
+label-separator-background = ${colors.background}
+; logout
+menu-0-0 = "logout"
+menu-0-0-foreground = ${colors.foreground}
+menu-0-0-background = ${colors.background}
+menu-0-0-exec = bspc quit
+; suspend
+menu-0-1 = ""
+menu-0-1-foreground = ${colors.foreground}
+menu-0-1-background = ${colors.background}
+menu-0-1-font = 3
+menu-0-1-exec = systemctl suspend && slimlock
+; reboot
+menu-0-2 = ""
+menu-0-2-foreground = ${colors.foreground}
+menu-0-2-background = ${colors.background}
+menu-0-2-font = 3
+menu-0-2-exec = systemctl reboot
+; poweroff
+menu-0-3 = "  "
+menu-0-3-foreground = ${colors.primary}
+menu-0-3-background = ${colors.background}
+menu-0-3-font = 3
+menu-0-3-exec = systemctl poweroff
+
+
+;;------------------------------------
+;;            MISCS
+;;------------------------------------
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
