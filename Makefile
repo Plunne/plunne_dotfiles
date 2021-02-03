@@ -10,8 +10,7 @@ FileManager = pcmanfm ranger
 Archiver = xarchiver
 PdfViewer = zathura
 VideoViewer = mpv
-Screenshot = flameshot
-
+Screenshot = flameshot dbus
 
 # System
 Sysinfos = neofetch
@@ -25,9 +24,7 @@ Wallpaper = feh
 
 # Xorg
 Gpu = xf86-video-amdgpu
-
 Xorg = xorg-server xorg-xinit xorg-xrandr xsel
-
 X11 = $(Gpu) $(Xorg)
 
 # Audio
@@ -48,6 +45,7 @@ Office = libreoffice-still
 #####################
 #     VARIABLES     #
 #####################
+
 MAIN_APPS = $(Terminal) $(Editor) $(Browser) $(FileManager) $(Archiver) $(PdfViewer) $(VideoViewer) $(Screenshot)
 SYSTEM = $(Sysinfos) $(Sysmonitor)
 WM = $(Bar) $(Compositor) $(Launcher) $(Wallpaper)
@@ -62,7 +60,7 @@ ALL = $(MAIN_APPS) $(SYSTEM) $(WM) $(XORG) $(MISC) $(APPS)
 #     INSTALLATION     #
 ########################
 
-all: update install
+all: update install wm zsh
 
 .PHONY: update install
 
@@ -72,13 +70,26 @@ update:
 install:
 	yay -S $(ALL)
 
+wm:
+	yay -S bspwm sxhkd
+
 
 ###############
 #     ZSH     #
 ###############
 
-zsh:
+# Set your username
+USER = plunne
+
+zsh: zsh-omz p10k
+
+zsh-omz:
 	sudo pacman -S zsh
-	sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	chsh -s /bin/zsh
+	chsh -s /bin/zsh $(USER)
 	echo "exec zsh" > .bashrc
+	zsh
+	sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+p10k:
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+

@@ -10,7 +10,6 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/plunne/.oh-my-zsh"
-export EDITOR=nvim
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -82,24 +81,12 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    archplunne
     sudo
 )
 
 source $ZSH/oh-my-zsh.sh
-#source $HOME/.zshenv
-# User configuration
+source $HOME/.config/zsh/archplunne.zsh
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-#if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nvim'
-#else
-#   export EDITOR='nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -111,5 +98,5 @@ setopt globdots
 #################
 # Run at launch #
 #################
-#sh -c echo -e "\n"
+
 #sh -c echo -e "\n" && neofetch
