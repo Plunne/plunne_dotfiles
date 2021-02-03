@@ -82,10 +82,14 @@ content-foreground = ${colors.background}
 content = ${glyphs.cleft}
 content-font = 3
 
-;--------------------------
+;-------------------------------------------------------
 ;          BARs
-;--------------------------
+;-------------------------------------------------------
 
+
+;--------------------------
+;        PLUNNE 1
+;--------------------------
 [bar/plunne-bg]
 monitor=DVI-D-0
 width = 1896px
@@ -102,7 +106,6 @@ background = ${colors.background}
 font-0 = ${fonts.font-0}
 font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
-;;------- Plunne0 -------;;
 modules-center = date
 
 
@@ -125,7 +128,6 @@ line-size = 0
 line-color = #f00
 cursor-click = pointer
 cursor-scroll = ns-resize
-;;------- Plunne1 -------;;
 modules-left = xwindow
 
 
@@ -148,7 +150,6 @@ line-size = 0
 line-color = #f00
 cursor-click = pointer
 cursor-scroll = ns-resize
-;;------- Plunne2 -------;;
 modules-left = bspwm
 
 
@@ -171,40 +172,103 @@ line-size = 0
 line-color = #f00
 cursor-click = pointer
 cursor-scroll = ns-resize
-;;------- Plunne3 -------;;
 modules-right = wlan eth-logo eth memory alsa battery cleft-pink0 powermenu
 
 
-[bar/secondary-panel]
+
+;--------------------------
+;        PLUNNE 2
+;--------------------------
+
+[bar/plunne-bg2]
 monitor=HDMI-A-0
-width = 100%
-height = 26
-offset-x = 0
-offset-y = 0
-radius = 0
+width = 1896px
+height = 32
+offset-x = 12
+offset-y = 10
+radius = 15
 padding-left = 0
 padding-right = 0
-
-; default colors
+cursor-click = pointer
+cursor-scroll = ns-resize
+module-margin = 0
 background = ${colors.background}
-foreground = ${colors.foreground}
 font-0 = ${fonts.font-0}
 font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
-fixed-center = true
+modules-center = date
+
+
+[bar/plunne-title2]
+monitor=HDMI-A-0
+width = 400px
+height = 24
+offset-x = 136
+offset-y = 14
+radius = 13
+padding-left = 0
+padding-right = 0
+background = #00000000
+foreground = #FFFFFF
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
 module-margin = 0
 line-size = 0
 line-color = #f00
 cursor-click = pointer
 cursor-scroll = ns-resize
-;;------- Modules -------;;
-modules-left = bspwm xwindow
-modules-center = ;xwindow
-modules-right = wlan eth memory alsa battery date powermenu
+modules-left = xwindow
+
+
+[bar/plunne-desktops2]
+monitor=HDMI-A-0
+width = 144px
+height = 24
+offset-x = 17
+offset-y = 14
+radius = 13
+padding-left = 0
+padding-right = 0
+background = ${colors.background}
+foreground = ${colors.primary}
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+module-margin = 0
+line-size = 0
+line-color = #f00
+cursor-click = pointer
+cursor-scroll = ns-resize
+modules-left = bspwm
+
+
+[bar/plunne-status2]
+monitor=HDMI-A-0
+width = 900px
+height = 24
+offset-x = 1003px
+offset-y = 14
+radius = 13
+padding-left = 0
+padding-right = 0
+background = #00000000
+foreground = ${colors.primary}
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+module-margin = 0
+line-size = 0
+line-color = #f00
+cursor-click = pointer
+cursor-scroll = ns-resize
+modules-right = wlan eth-logo eth memory alsa battery cleft-pink0 powermenu
 
 
 
-
+;-------------------------------------------------------
+;            MODULES
+;-------------------------------------------------------
 
 ;;------------------------------------
 ;;            LEFT
