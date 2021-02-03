@@ -4,16 +4,15 @@
 killall -q polybar
 
 # Launch Polybars
-
-# Main
-polybar -r plunne-bg &
+polybar plunne-bg &
+polybar plunne-bg2 &
 sleep 0.2;
-polybar -r plunne-title &
+polybar plunne-title &
+polybar plunne-title2 &
 sleep 0.2;
-polybar -r plunne-desktops &
+polybar plunne-desktops &
+polybar plunne-desktops2 &
 sleep 0.2;
-polybar -r plunne-status &
+polybar plunne-status &
+polybar plunne-status2 &
 sleep 0.2;
-
-# Right
-polybar -r secondary-panel &
