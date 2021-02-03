@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 ############################################
 ##               ARCHPLUNNE               ##
 ############################################
@@ -24,8 +26,9 @@ alias suvi='sudo nvim'
 alias suvs='sudo code'
 
 # Config files
-alias c-ohmyz='$EDITOR ~/.oh-my-zsh/plugins/archplunne/archplunne.plugin.zsh'
+alias c-plunne='$EDITOR ~/zsh/archplunne.zsh'
 alias c-bsp='$EDITOR ~/.config/bspwm/bspwmrc'
+alias c-i3='$EDITOR ~/.config/i3/config'
 alias c-ala='$EDITOR ~/.config/alacritty/alacritty.yml'
 alias c-dunst='$EDITOR ~/.config/dunst/dunstrc'
 alias c-neo='$EDITOR ~/.config/neofetch/config.conf'
