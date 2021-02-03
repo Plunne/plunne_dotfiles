@@ -71,3 +71,14 @@ update:
 
 install:
 	yay -S $(ALL)
+
+
+###############
+#     ZSH     #
+###############
+
+zsh:
+	sudo pacman -S zsh
+	sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	chsh -s /bin/zsh
+	echo "exec zsh" > .bashrc
