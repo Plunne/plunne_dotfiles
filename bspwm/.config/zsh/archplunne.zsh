@@ -47,6 +47,11 @@ alias c-vset='$EDITOR ~/.config/nvim/general/settings.vim'
 alias s-polybar='$EDITOR ~/.scripts/polybar.sh'
 alias s-monitors='$EDITOR ~/.scripts/monitors.sh'
 
+# Git
+alias ga='git add . && git status'
+alias gc='git commit -m'
+alias gp='git push'
+
 # Network
 alias net-h='https://linuxhint.com/arch_linux_network_manager/'
 alias net-show='nmcli connection show'
