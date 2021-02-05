@@ -71,7 +71,7 @@ install:
 	yay -S $(ALL)
 
 wm:
-	yay -S bspwm sxhkd
+	yay -S bspwm sxhkd bsp-layout man-db
 
 
 ###############
