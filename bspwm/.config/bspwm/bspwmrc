@@ -42,9 +42,12 @@ bspc config gapless_monocle      true
 # Windows Rules
 #bspc rule -a firefox desktop='^7'
 bspc rule -a discord desktop='^9'
-bspc rule -a spectacle state='floating'
 bspc rule -a flameshot state='floating'
 
 # Start Apps
-alacritty &
-discord &
+bspc desktop -f '^9' && discord &
+sleep 2
+bspc desktop -f '^7' && firefox &
+sleep 2
+bspc desktop -f '^1' && alacritty &
+
