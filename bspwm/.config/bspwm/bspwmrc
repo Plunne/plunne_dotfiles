@@ -16,11 +16,16 @@ sh .scripts/polybar.sh
 #############
 
 # Wallpaper
-feh --bg-scale ~/.wallpaper/121419.jpg
+feh --bg-scale ~/.wallpaper/121407.jpg
 
 # Desktops
 bspc monitor $Monitor_Main -d      
 bspc monitor $Monitor_Right -d   ﭮ
+
+# Layouts
+bsp-layout set tall   --master-size 0.6    # 1:Term    -- V Stack
+bsp-layout set grid                        # 2:FM      -- R Grid
+bsp-layout set rtall  --master-size 0.6    # 4:PDF     -- R Tall
 
 # WM Properties
 bspc config border_width         0
@@ -35,7 +40,11 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Windows Rules
-bspc rule -a firefox desktop='^7'
+#bspc rule -a firefox desktop='^7'
 bspc rule -a discord desktop='^9'
 bspc rule -a spectacle state='floating'
 bspc rule -a flameshot state='floating'
+
+# Start Apps
+alacritty &
+discord &

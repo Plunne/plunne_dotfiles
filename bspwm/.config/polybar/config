@@ -172,7 +172,7 @@ line-size = 0
 line-color = #f00
 cursor-click = pointer
 cursor-scroll = ns-resize
-modules-right = wlan eth-logo eth memory alsa battery cleft-pink0 powermenu
+modules-right = wlan eth memory alsa battery cleft-pink0 powermenu
 
 
 
@@ -262,7 +262,7 @@ line-size = 0
 line-color = #f00
 cursor-click = pointer
 cursor-scroll = ns-resize
-modules-right = wlan eth-logo eth memory alsa battery cleft-pink0 powermenu
+modules-right = wlan eth memory alsa battery cleft-pink0 powermenu
 
 
 
@@ -339,35 +339,12 @@ interface = wlp1s0
 interval = 3.0
 
 ; wlan connected
-label-connected = "  %essid%"
+label-connected = " %essid%   "
 format-connected = <label-connected>
+format-connected-prefix = ""
+format-connected-prefix-font = 2
 format-connected-background = #00000000
 format-connected-foreground = ${colors.foreground}
-; wlan disconnected
-label-disconnected =
-format-disconnected = <label-disconnected>
-format-disconnected-background = #00000000
-format-disconnected-foreground = ${colors.foreground}
-
-
-[module/eth-logo]
-#type = internal/network
-#interface = enp6s0
-#interval = 3.0
-
-; eth connected
-#label-connected = 
-#format-connected = <label-connected>
-#format-connected-background = #00000000
-#format-connected-foreground = ${colors.foreground}
-#format-connected-font = 2
-;eth disconnected
-#label-disconnected = 
-#format-disconnected = <label-disconnected>
-#format-disconnected-background = #00000000
-#format-disconnected-foreground = ${colors.foreground}
-#format-connected-font = 2
-
 
 
 [module/eth]
@@ -378,11 +355,15 @@ interval = 3.0
 ; eth connected
 label-connected = " %downspeed%   "
 format-connected = <label-connected>
+format-connected-prefix = ""
+format-connected-prefix-font = 2
 format-connected-background = #00000000
 format-connected-foreground = ${colors.foreground}
 ;eth disconnected
 label-disconnected = " none    "
 format-disconnected = <label-disconnected>
+format-disconnected-prefix = ""
+format-disconnected-prefix-font = 2
 format-disconnected-background = #00000000
 format-disconnected-foreground = ${colors.foreground}
 

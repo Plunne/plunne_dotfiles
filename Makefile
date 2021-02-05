@@ -42,6 +42,9 @@ Network = net-tools
 # Office
 Office = libreoffice-still
 
+# AVR (Personnal because I'm programming AVR uControlers)
+AVR = avr-gcc avr-libc avrdude avr-gdb
+
 #####################
 #     VARIABLES     #
 #####################
@@ -51,8 +54,11 @@ SYSTEM = $(Sysinfos) $(Sysmonitor)
 WM = $(Bar) $(Compositor) $(Launcher) $(Wallpaper)
 XORG = $(Gpu) $(Xorg) $(X11)
 MISC = $(Audio) $(Archives) $(Filetypes) $(Network) $(Office)
-APPS = discord spotify
 
+# Set your misc apps
+APPS = discord spotify signal-desktop $(AVR)
+
+# All packages to install
 ALL = $(MAIN_APPS) $(SYSTEM) $(WM) $(XORG) $(MISC) $(APPS)
 
 
